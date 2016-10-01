@@ -1,0 +1,33 @@
+{
+	"name": "FLO Sign In",
+	"short_name": "FLO Sign In",
+
+	"icons": { 
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png" 
+	},
+
+	"version": "1.0",
+	"description": "The quickest way to sign into Flinders Learning Online.",
+	"author": "Kevin Doveton",
+	"homepage_url": "http://kdoveton.com",
+
+	"content_scripts": [
+		{
+			"matches": ["https://flinders.okta.com/login/login.htm?fromURI=%2Fapp%2Fflindersuniversity_flo_1*"],
+			"js": ["jquery.js", "login.js"]
+		}
+	],
+
+	"options_ui": {
+		"page": "options.html"
+	},
+	
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
+
+	"manifest_version": 2
+}
