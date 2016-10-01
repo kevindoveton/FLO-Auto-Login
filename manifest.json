@@ -8,13 +8,12 @@
 	},
 
 	"description": "Log in to FLO",
-	"version": "0.1",
+	"version": "1.0",
 
 	"content_scripts": [
 		{
 			"matches": ["https://flo.flinders.edu.au/", "https://flinders.okta.com/login/login.htm?fromURI=%2Fapp%2Fflindersuniversity_flo_1*"],
 			"js": ["jquery.js", "login.js"]
-			// "run_at": "document_end"
 		}
 	],
 

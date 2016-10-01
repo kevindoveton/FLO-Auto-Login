@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>FLO Sign In - Options</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<script type="text/javascript" src="options.js"></script>
 	<style>
 		body {
@@ -15,10 +16,13 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+		label {
+			padding-bottom: 1em;
+		}
 	</style>
 </head>
 <body>
-	<label for="username">Username</label>
+<!-- 	<label for="username">Username</label>
 	<input type="text" id="username" />
 	<br />
 	
@@ -26,6 +30,43 @@
 	<input type="password" id="password" />
 	<br />
 	
-	<button id="save">Save</button>
+	<button id="save">Save</button> -->
+
+	<form class="form-horizontal">
+	<fieldset>
+
+	<!-- Form Name -->
+	<!-- <legend>FLO Details</legend> -->
+
+	<!-- Text input-->
+	<div class="form-group">
+		<label class="col-md-4 control-label" for="username">Username</label>  
+		<div class="col-md-4">
+		<input id="username" name="username" type="text" placeholder="username" class="form-control input-md">
+		<span class="help-block">Enter your FLO username.</span>  
+		</div>
+	</div>
+
+	<!-- Password input-->
+	<div class="form-group">
+		<label class="col-md-4 control-label" for="password">Password:</label>
+		<div class="col-md-4">
+			<input id="password" name="password" type="password" placeholder="password" class="form-control input-md">
+			<span class="help-block">Enter your FLO password.</span>
+		</div>
+	</div>
+
+	<!-- Button -->
+	<div class="form-group">
+		<label class="col-md-4 control-label" for="save"></label>
+		<div class="col-md-4">
+			<button id="save" name="save" class="btn btn-primary">Save</button>
+		</div>
+	</div>
+
+	</fieldset>
+	</form>
+
+
 </body>
 </html>
