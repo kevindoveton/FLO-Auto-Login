@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<script type="text/javascript">
+		safari.application.addEventListener( "message", function( e ) 
+		{
+			if( e.name === "getSettings" ) 
+			{
+				e.target.page.dispatchMessage( "setSettings", 
+				{
+					username_flo: safari.extension.settings.username_flo,
+					password_flo: safari.extension.settings.password_flo
+				});
+			}
+		}, false );
+	</script>
+</head>
+<body>
+<div class="loader"></div>
+</body>
+</html>
